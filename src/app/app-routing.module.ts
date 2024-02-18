@@ -9,9 +9,10 @@ import {AdminpageComponent} from "./pages/admin/adminpage.component";
 import {UserpageComponent} from "./pages/user/userpage.component";
 import {roleGuard} from "./guard/role-guard.guard";
 import {UnauthorizedComponent} from "./pages/unauthorized/unauthorized.component";
+import {homeAutoRedrictionGuard} from "./guard/auth/homeAutoRedirection";
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'login', component: LoginComponent, canActivate: [unAuthGuard] },
   { path: 'register', component: RegisterComponent, canActivate: [unAuthGuard] },
   { path: 'home', component: HomeComponent, canActivate: [authGuard] },

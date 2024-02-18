@@ -1,70 +1,186 @@
 <!-- Section: Design Block -->
-<section class="background-radial-gradient overflow-hidden pt-5">
-  <div class="container px-4 py-5 px-md-5 text-center text-lg-start ">
-    <div class="row gx-lg-5 align-items-center mb-5">
-      <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
-        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-          The best offer <br />
-          <span style="color: hsl(218, 81%, 75%)">for your business</span>
-        </h1>
-        <p class="mb-4 opacity-70" style="color: hsl(28,82%,85%)">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Temporibus, expedita iusto veniam atque, magni tempora mollitia
-          dolorum consequatur nulla, neque debitis eos reprehenderit quasi
-          ab ipsum nisi dolorem modi. Quos?
-        </p>
-      </div>
+<!--<section class="background-radial-gradient overflow-hidden pt-5">-->
+<!--  <div class="container px-4 py-5 px-md-5 text-center text-lg-start ">-->
+<!--    <div class="row gx-lg-5 align-items-center mb-5">-->
+<!--      <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">-->
+<!--        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">-->
+<!--          The best offer <br />-->
+<!--          <span style="color: hsl(218, 81%, 75%)">for your business</span>-->
+<!--        </h1>-->
+<!--        <p class="mb-4 opacity-70" style="color: hsl(28,82%,85%)">-->
+<!--          Lorem ipsum dolor, sit amet consectetur adipisicing elit.-->
+<!--          Temporibus, expedita iusto veniam atque, magni tempora mollitia-->
+<!--          dolorum consequatur nulla, neque debitis eos reprehenderit quasi-->
+<!--          ab ipsum nisi dolorem modi. Quos?-->
+<!--        </p>-->
+<!--      </div>-->
 
-      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
-        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
-        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+<!--      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">-->
+<!--        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>-->
+<!--        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>-->
 
-        <div class="card bg-glass">
-          <div class="card-body px-4 py-5 px-md-5">
-            <form #formLogin="ngForm" (click)="onSubmit(formLogin)">
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Email Address" ngModel #email="ngModel"
-                       name="email" required email>
-                <div *ngIf="email.errors && formLogin.submitted" class="text-danger">
-                  Email is required!
-                </div>
-              </div>
-
-
-              <!-- Password input -->
-              <div class="form-outline mb-4">
-                <label for="password" class="form-label">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  placeholder="Password"
-                  ngModel
-                  #password="ngModel"
-                  name="password"
-                  required
-                  minlength="6">
-                <div *ngIf="password.errors && formLogin.submitted" class="text-danger">
-                  <div *ngIf="password.errors['required']">Password is required</div>
-
-                </div>
-              </div>
+<!--        <div class="card bg-glass">-->
+<!--          <div class="card-body px-4 py-5 px-md-5">-->
+<!--            <form #formLogin="ngForm" (click)="onSubmit(formLogin)">-->
+<!--              &lt;!&ndash; Email input &ndash;&gt;-->
+<!--              <div class="form-outline mb-4">-->
+<!--                <label for="email" class="form-label">Email</label>-->
+<!--                <input type="email" class="form-control" id="email" placeholder="Email Address" ngModel #email="ngModel"-->
+<!--                       name="email" required email>-->
+<!--                <div *ngIf="email.errors && formLogin.submitted" class="text-danger">-->
+<!--                  Email is required!-->
+<!--                </div>-->
+<!--              </div>-->
 
 
+<!--              &lt;!&ndash; Password input &ndash;&gt;-->
+<!--              <div class="form-outline mb-4">-->
+<!--                <label for="password" class="form-label">Password</label>-->
+<!--                <input-->
+<!--                  type="password"-->
+<!--                  class="form-control"-->
+<!--                  id="password"-->
+<!--                  placeholder="Password"-->
+<!--                  ngModel-->
+<!--                  #password="ngModel"-->
+<!--                  name="password"-->
+<!--                  required-->
+<!--                  minlength="6">-->
+<!--                <div *ngIf="password.errors && formLogin.submitted" class="text-danger">-->
+<!--                  <div *ngIf="password.errors['required']">Password is required</div>-->
 
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-block mb-4">
-                Sign In
-              </button>
+<!--                </div>-->
+<!--              </div>-->
 
 
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!--              &lt;!&ndash; Submit button &ndash;&gt;-->
+<!--              <button type="submit" class="btn btn-primary btn-block mb-4">-->
+<!--                Sign In-->
+<!--              </button>-->
+
+
+<!--            </form>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        -->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section> &ndash;&gt;-->
 <!-- Section: Design Block -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Hacker Login Form</title>
+  <!--  <link rel="stylesheet" href="./style.css">-->
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>CodePen - Animated Login Form using Html &amp; CSS Only</title>
+
+  <!--  <link rel="stylesheet" href="./style.css">-->
+
+</head>
+
+<body> <!-- partial:index.partial.html -->
+
+<section><span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+  <span></span> <span></span> <span></span> <span></span>
+
+  <div class="signin">
+
+    <div class="content">
+
+      <h2>Sign In</h2>
+      <form #formLogin="ngForm" (click)="onSubmit(formLogin)" class="form">
+        <!-- Email input -->
+        <div class="inputBox">
+          <input type="email" id="email" ngModel #email="ngModel"
+                 name="email" required email> <i>Username</i>
+        </div>
+        <div *ngIf="email.errors && formLogin.submitted" class="text-danger">
+          Email is required!
+        </div>
+
+        <!-- Password input -->
+        <div class="inputBox">
+
+          <input type="password"
+                 id="password"
+                 ngModel
+                 #password="ngModel"
+                 name="password"
+                 required
+                 minlength="6"
+                 required> <i>Password</i>
+        </div>
+        <div *ngIf="password.errors && formLogin.submitted" class="text-danger">
+          <div *ngIf="password.errors['required']">Password is required</div>
+        </div>
+
+        <div class="links"><a href="#">Forgot Password</a> <a href="#">Signup</a>
+
+        </div>
+        <!-- Submit button -->
+        <div class="inputBox">
+
+          <input type="submit">
+
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</section> <!-- partial -->
+
+</body>
+
+</html>
+<!-- partial -->
+
+</body>
+</html>

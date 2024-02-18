@@ -2,9 +2,12 @@ import {CanActivateFn, Router} from '@angular/router';
 import {ResponseDto} from "../models/user/responseDto.module";
 
 export const roleGuard: CanActivateFn = (route, state) => {
+
   const router: Router = new Router();
   const responseString: string | null = localStorage.getItem('user');
   const response: ResponseDto = responseString ? JSON.parse(responseString) : {};
+
+console.log(response.role === 'ADMIN' && state.url.startsWith('/admin'));
 
   if (response.role === 'ADMIN' && state.url.startsWith('/admin')) {
       return true;

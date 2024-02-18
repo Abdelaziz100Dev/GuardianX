@@ -4,11 +4,12 @@ import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'app-userpage',
-  templateUrl: './userpage.component.html',
-  styleUrls: ['./userpage.component.css']
+  templateUrl: '../Templates/admin/index.html',
+  // styleUrls: ['./userpage.component.css']
 })
 export class UserpageComponent implements OnInit {
     response! : string
+    Admin = "User";
   constructor(private  userService:UserService) { }
   ngOnInit(): void {
       this.userService.getMessage().subscribe({
@@ -21,5 +22,6 @@ export class UserpageComponent implements OnInit {
         }
       })
   }
+
 
 }

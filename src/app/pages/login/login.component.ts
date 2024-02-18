@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit  {
         formLogin.value.email, formLogin.value.password).subscribe({
           next: user => {
               console.log(user);
+              debugger
             this.router.navigate(['home']);
 
           },

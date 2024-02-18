@@ -3,11 +3,12 @@ import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'app-adminpage',
-  templateUrl: './adminpage.component.html',
-  styleUrls: ['./adminpage.component.css']
+  templateUrl: '../Templates/admin/index.html',
+  // styleUrls: ['./adminpage.component.css']
 })
 export class AdminpageComponent implements OnInit {
   response! : string
+  Admin = "Admin";
   constructor(private  userService:UserService) { }
   ngOnInit(): void {
     this.userService.getAdminMessage().subscribe({
@@ -19,5 +20,8 @@ export class AdminpageComponent implements OnInit {
         console.log(error);
       }
     })
+  }
+  logout() {
+    this.userService.logout();
   }
 }
